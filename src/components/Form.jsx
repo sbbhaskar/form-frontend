@@ -27,7 +27,9 @@ const Form = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/form", formData);
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/form`, formData);
+);
+
       alert(res.data.message);
 
       // ✅ Reset form after successful submission
